@@ -11,6 +11,10 @@ import org.junit.runners.JUnit4;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
+/**
+ * The type Stream impl test.
+ * @author Felipe Adorno (felipeadsc@gmail.com)
+ */
 @RunWith(JUnit4.class)
 public class StreamImplTest extends TestCase {
 
@@ -21,6 +25,11 @@ public class StreamImplTest extends TestCase {
         stream = new StreamImpl("aAbBABac");
     }
 
+    /**
+     * Test get next.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void testGetNext() throws Exception {
         assertThat(stream.getNext(), equalTo('a'));
@@ -33,6 +42,11 @@ public class StreamImplTest extends TestCase {
         assertThat(stream.getNext(), equalTo('c'));
     }
 
+    /**
+     * Test has next.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void testHasNext() throws Exception {
         assertThat(stream.getNext(), equalTo('a'));

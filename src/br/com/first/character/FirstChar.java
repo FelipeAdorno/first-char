@@ -6,8 +6,18 @@ import br.com.first.character.stream.Stream;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * The type First char.
+ * @author Felipe Adorno (felipeadsc@gmail.com)
+ */
 public class FirstChar {
 
+    /**
+     * Get the first chat from Stream.
+     *
+     * @param input the Stream input
+     * @return the unique first char
+     */
     public static char firstChar(final Stream input) {
         Map<Character,Integer> repeatTimes = iterateOverStream(input);
         Character uniqueChar = getFirstUniqueChar(repeatTimes);
